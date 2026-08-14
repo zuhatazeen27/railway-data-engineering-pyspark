@@ -523,23 +523,3 @@ Use station-level and route-level analytics to identify locations that may requi
 | Google Colab | Development environment |
 
 ---
-
-# 📁 Project Structure
-railway-data-engineering-pyspark/
-|
-├── 📁 data/
-│   └── Railway_info.csv
-│
-├── 📁 notebooks/
-│   └── Railway_Data_Engineering.ipynb
-│
-├── 📁 visualizations/
-│   ├── top_source_stations.png
-│   ├── day_wise_distribution.png
-│   └── station_day_heatmap.png
-│
-├── 📁 reports/
-│   └── Railway_Data_Engineering_Report.md
-│
-├── 📄 README.md
-└── 📄 requirements.txt
