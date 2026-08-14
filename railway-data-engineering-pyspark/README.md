@@ -1,57 +1,63 @@
 # 🚆 Railway Data Engineering Pipeline using PySpark
 
+<p align="center">
+
+<b>PySpark</b> • <b>Python</b> • <b>Pandas</b> • <b>Matplotlib</b> • <b>Seaborn</b> • <b>Plotly</b> • <b>Google Colab</b>
+
+</p>
+
+<p align="center">
+
+End-to-end railway data engineering and analytics project using PySpark for data processing, transformation, analysis, visualization, and reporting.
+
+</p>
+
+---
+
 ## 📌 Project Overview
 
-This project is an end-to-end **Railway Data Engineering and Analytics project** built using **PySpark**.
+This project demonstrates an end-to-end **Data Engineering and Analytics workflow using PySpark**.
 
-The project analyzes railway operational data to identify train patterns, major railway hubs, high-frequency routes, day-wise train distribution, and weekday versus weekend operations.
+The railway dataset is analyzed to identify:
 
-The complete workflow covers data loading, data quality checking, cleaning, transformation, aggregation, advanced analysis, visualization, and automated reporting.
+- 🚆 Train operation patterns
+- 🚉 Major source and destination stations
+- 🛤️ High-frequency railway routes
+- 📅 Day-wise train distribution
+- 📊 Weekday vs weekend services
+- 🔍 Station-level trends
+- 💡 Operational insights and recommendations
 
----
-
-## 🛠️ Technologies Used
-
-- 🐍 Python
-- ⚡ PySpark
-- 🐼 Pandas
-- 📊 Matplotlib
-- 🎨 Seaborn
-- 📈 Plotly
-- ☁️ Google Colab
+The complete workflow transforms raw railway CSV data into meaningful analytical insights.
 
 ---
 
-## 🏗️ Project Workflow
+## ⚙️ Architecture / Workflow
 
 ```text
-Railway CSV Dataset
-        ↓
-Data Loading using PySpark
-        ↓
-Data Exploration
-        ↓
-Data Quality & Null Checking
-        ↓
-Data Cleaning
-        ↓
-Data Transformation
-        ↓
-Aggregation & Analysis
-        ↓
-Pattern Analysis
-        ↓
-Visualization
-        ↓
-Automated Reporting
-        ↓
-Business Insights
+🚆 Railway CSV Dataset
+          ↓
+⚡ Data Loading using PySpark
+          ↓
+🔍 Data Exploration
+          ↓
+🧹 Data Cleaning
+          ↓
+⚙️ Data Transformation
+          ↓
+📊 Aggregation & Analysis
+          ↓
+📈 Visualization
+          ↓
+📋 Automated Reporting
+          ↓
+💡 Business Insights
 
 ---
 
 ## 📂 Dataset
 
-The dataset contains railway train service information.
+The project uses railway train service information.
 
 ### Dataset Columns
 
@@ -63,18 +69,27 @@ The dataset contains railway train service information.
 | `Destination_Station_Name` | Destination station |
 | `days` | Operating day |
 
+### Dataset Size
+
+**11,113 railway records**
+
 ---
 
-# 🔍 Level 1: Data Exploration
+# 🔍 Level 1 — Data Exploration
 
-### Task 1.1 – Load and Inspect Data
+## Task 1.1 — Load and Inspect Data
 
-- Loaded the railway CSV dataset using PySpark.
-- Displayed the first 10 records.
-- Inspected schema and data types.
-- Checked missing values.
+The railway dataset was loaded using PySpark.
 
-### Task 1.2 – Basic Statistics
+Performed:
+
+- Loaded the CSV dataset
+- Displayed the first 10 records
+- Inspected schema
+- Checked data types
+- Checked missing values
+
+## Task 1.2 — Basic Statistics
 
 Calculated:
 
@@ -84,30 +99,33 @@ Calculated:
 - Most common source station
 - Most common destination station
 
-### Task 1.3 – Data Cleaning
+## Task 1.3 — Data Cleaning
 
-- Checked for missing values.
-- Handled missing values.
-- Standardized station names using uppercase formatting.
-- Removed unnecessary spaces from station names.
+Performed:
+
+- Missing-value identification
+- Missing-value handling
+- Station-name standardization
+- Uppercase conversion
+- Whitespace removal
 
 ---
 
-# ⚙️ Level 2: Data Transformation
+# ⚙️ Level 2 — Data Transformation
 
-### Task 2.1 – Data Filtering
+## Task 2.1 — Data Filtering
 
-Filtered trains based on:
+Filtered railway data based on:
 
 - Operating day
 - Source station
 
-Example:
+Examples:
 
 - Saturday trains
-- Trains starting from MADGOAN JN.
+- Trains starting from `MADGOAN JN.`
 
-### Task 2.2 – Grouping and Aggregation
+## Task 2.2 — Grouping and Aggregation
 
 Performed:
 
@@ -115,62 +133,67 @@ Performed:
 - Average trains per operating day
 - Source-destination route aggregation
 
-### Task 2.3 – Data Enrichment
+## Task 2.3 — Data Enrichment
 
-Created a new `Train_Category` column:
+Created a new `Train_Category` column.
 
 ```text
-Monday-Friday → Weekday
-Saturday-Sunday → Weekend
+Monday - Friday   → Weekday
+Saturday - Sunday → Weekend
 
 ---
 
-# 📊 Level 3: Advanced Data Analysis
+# 📊 Level 3 — Advanced Data Analysis
 
-### Task 3.1 – Pattern Analysis
+## Task 3.1 — Pattern Analysis
 
 Analyzed:
 
 - Day-wise train distribution
 - Frequent railway routes
 - Major source stations
-- Train operation patterns
+- Source-destination patterns
+- Train operation trends
 
-### Task 3.2 – Correlation Analysis
+## Task 3.2 — Correlation Analysis
 
-Calculated the correlation between the day number and train count.
+Calculated the correlation between day number and train count.
 
-**Correlation: 0.3806**
+### Correlation Result
 
-This indicates a moderate positive relationship between the day number and train count in this dataset.
+**0.3806**
+
+This indicates a positive relationship between the day number and train count in the analyzed dataset, although the relationship is not strong.
 
 ---
 
-# 📈 Level 4: Visualization & Reporting
+# 📈 Level 4 — Visualization & Reporting
 
-## Task 4.1 – Visualizations
+## Task 4.1 — Visualizations
 
-Created visualizations using Matplotlib, Seaborn, and Plotly.
+Visualizations were created using:
 
-### 📊 Top Source Stations
+- Matplotlib
+- Seaborn
+- Plotly
 
-![Top Source Stations](visualizations/top_source_stations.png)
+### 📊 Top 10 Source Stations
+
+<img src="visualizations/top_source_stations.png" width="700">
 
 ### 📈 Day-wise Train Distribution
 
-![Day-wise Distribution](visualizations/day_wise_distribution.png)
+<img src="visualizations/day_wise_distribution.png" width="700">
 
 ### 🔥 Station vs Day Heatmap
 
-![Station Day Heatmap](visualizations/station_day_heatmap.png)
-
-An interactive Plotly visualization was also created for the top source stations.
+<img src="visualizations/station_day_heatmap.png" width="700">
 
 ---
 
-# 📋 Task 4.2 – Automated Reporting
+# 📋 Task 4.2 — Automated Reporting
 
-Created an automated PySpark-based report containing:
+A PySpark-based automated report was created containing:
 
 - Dataset summary
 - Station-level insights
@@ -182,8 +205,9 @@ Created an automated PySpark-based report containing:
 - Business recommendations
 - Executive summary
 
-📄 **Detailed Report:**  
-`reports/Railway_Data_Engineering_Report.md`
+### 📄 Detailed Report
+
+[View Railway Data Engineering Report](reports/Railway_Data_Engineering_Report.md)
 
 ---
 
@@ -191,103 +215,156 @@ Created an automated PySpark-based report containing:
 
 | Metric | Result |
 |---|---:|
-| Total Records | 11,113 |
-| Total Unique Trains | 11,113 |
-| Unique Source Stations | 921 |
-| Unique Destination Stations | 924 |
-| Top Source Station | CST-MUMBAI |
-| Top Source Services | 513 |
-| Top Destination Station | CST-MUMBAI |
-| Top Destination Services | 514 |
-| Weekday Services | 7,918 |
-| Weekend Services | 3,195 |
-| Most Frequent Route | TAMBARAM → CHENNAI BEACH |
-| Top Route Services | 137 |
-| Day/Train Correlation | 0.3806 |
+| Total Records | **11,113** |
+| Total Unique Trains | **11,113** |
+| Unique Source Stations | **921** |
+| Unique Destination Stations | **924** |
+| Top Source Station | **CST-MUMBAI** |
+| Top Source Services | **513** |
+| Top Destination Station | **CST-MUMBAI** |
+| Top Destination Services | **514** |
+| Weekday Services | **7,918** |
+| Weekend Services | **3,195** |
+| Most Frequent Route | **TAMBARAM → CHENNAI BEACH** |
+| Top Route Services | **137** |
+| Day/Train Correlation | **0.3806** |
+
+---
+
+# 🚉 Station Insights
+
+### 🥇 Top Source Station
+
+**CST-MUMBAI — 513 train services**
+
+### 🥇 Top Destination Station
+
+**CST-MUMBAI — 514 train services**
+
+CST-MUMBAI acts as a major railway hub within the analyzed dataset.
+
+---
+
+# 🛤️ Route Analysis
+
+### Most Frequent Route
+
+**TAMBARAM → CHENNAI BEACH**
+
+**137 services**
+
+Other high-frequency routes identified include connections involving:
+
+- CST-MUMBAI
+- PANVEL
+- RAVLI JN
+- CHENNAI BEACH
+- TAMBARAM
+
+---
+
+# 📅 Day-wise Train Distribution
+
+| Day | Train Services |
+|---|---:|
+| Monday | 1,503 |
+| Tuesday | 1,628 |
+| Wednesday | 1,612 |
+| Thursday | 1,526 |
+| Friday | 1,649 |
+| Saturday | 1,593 |
+| Sunday | 1,602 |
+
+### Highest
+
+**Friday — 1,649 trains**
+
+### Lowest
+
+**Monday — 1,503 trains**
+
+---
+
+# 📊 Weekday vs Weekend
+
+| Category | Train Services |
+|---|---:|
+| Weekday | **7,918** |
+| Weekend | **3,195** |
+
+The dataset shows significantly more train services during weekdays compared with weekends.
 
 ---
 
 # 💡 Key Insights
 
-- **CST-MUMBAI** is the most frequent source and destination station.
-- **TAMBARAM → CHENNAI BEACH** is one of the highest-frequency routes.
-- Train services are more concentrated on weekdays.
-- Major railway hubs account for a significant portion of train services.
-- Day-wise analysis helps identify operational patterns.
-- Several high-frequency routes operate in both directions.
+- 🚉 **CST-MUMBAI** is the most frequent source station.
+- 🚉 **CST-MUMBAI** is also the most frequent destination station.
+- 🛤️ **TAMBARAM → CHENNAI BEACH** is the most frequent route identified.
+- 📅 Train services are more concentrated during weekdays.
+- 🚆 Major railway hubs account for a significant portion of train services.
+- 📊 Day-wise analysis provides useful operational patterns.
+- 🔄 Several high-frequency routes operate in both directions.
+- 📈 The calculated day/train correlation is **0.3806**.
 
 ---
 
 # 📌 Business Recommendations
 
-- Optimize scheduling at high-traffic railway stations.
-- Use day-wise trends for better capacity planning.
-- Analyze high-frequency routes for service optimization.
-- Evaluate weekend demand before increasing services.
-- Prioritize infrastructure planning around major railway hubs.
+### 1. Optimize Major Railway Hubs
+
+Focus scheduling and infrastructure planning on high-traffic stations.
+
+### 2. Improve Capacity Planning
+
+Use day-wise train patterns for better resource and capacity planning.
+
+### 3. Analyze High-Frequency Routes
+
+Monitor high-frequency routes for potential scheduling optimization.
+
+### 4. Evaluate Weekend Demand
+
+Analyze passenger demand before increasing or reducing weekend services.
+
+### 5. Support Infrastructure Planning
+
+Use station-level and route-level analytics to identify locations that may require additional infrastructure.
+
+---
+
+# 🧰 Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Programming and analysis |
+| PySpark | Data processing and transformation |
+| Pandas | DataFrame conversion for visualization |
+| Matplotlib | Bar and line charts |
+| Seaborn | Heatmap visualization |
+| Plotly | Interactive visualization |
+| Google Colab | Development environment |
 
 ---
 
 # 📁 Project Structure
 
 ```text
-Railway_Data_Engineering_Project/
+railway-data-engineering-pyspark/
 │
-├── data/
+├── 📁 data/
 │   └── Railway_info.csv
 │
-├── notebooks/
+├── 📁 notebooks/
 │   └── Railway_Data_Engineering.ipynb
 │
-├── visualizations/
+├── 📁 visualizations/
 │   ├── top_source_stations.png
 │   ├── day_wise_distribution.png
 │   └── station_day_heatmap.png
 │
-├── reports/
+├── 📁 reports/
 │   └── Railway_Data_Engineering_Report.md
 │
-├── README.md
-└── requirements.txt```
-
-
-# 🚀 How to Run
-
-### 1. Install the required libraries
-
-```bash
-pip install -r requirements.txt
-### 2. Open the notebook
-
-Open:
-
-`notebooks/Railway_Data_Engineering.ipynb`
-
-The notebook can be executed using Google Colab or another PySpark-compatible environment.
-
----
-
-# 🎯 Project Objective
-
-The objective of this project is to demonstrate an end-to-end **PySpark data engineering workflow** using railway data, from data loading and cleaning to transformation, analysis, visualization, and reporting.
-
----
-
-## 👩‍💻 Skills Demonstrated
-
-- PySpark
-- Python
-- Data Cleaning
-- Data Transformation
-- Data Aggregation
-- Data Analysis
-- Data Visualization
-- Statistical Analysis
-- Automated Reporting
-- Business Insights
-
----
-
-## ⭐ Project Highlight
-
-Built an end-to-end PySpark data engineering pipeline processing **11,113 railway records**, performing data quality checks, transformations, aggregations, pattern analysis, visualizations, and automated reporting to derive actionable railway operational insights.
+├── 📄 README.md
+└── 📄 requirements.txt
