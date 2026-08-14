@@ -318,7 +318,6 @@ Performed:
 
 Created a new `Train_Category` column.
 
-```text
 Monday - Friday   → Weekday
 Saturday - Sunday → Weekend
 
@@ -526,10 +525,8 @@ Use station-level and route-level analytics to identify locations that may requi
 ---
 
 # 📁 Project Structure
-
-```text
 railway-data-engineering-pyspark/
-│
+|
 ├── 📁 data/
 │   └── Railway_info.csv
 │
