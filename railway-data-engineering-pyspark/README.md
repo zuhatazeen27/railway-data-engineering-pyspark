@@ -207,33 +207,6 @@ The project contains visualizations created using **Matplotlib, Seaborn, and Plo
 <b>🔥 Station vs Day Heatmap</b>
 
 </td>
-
-<td align="center">
-
-### 🛤️ Route Analysis
-
-<br>
-
-<b>TAMBARAM</b>
-
-<br>
-
-↓
-
-<br>
-
-<b>CHENNAI BEACH</b>
-
-<br>
-
-**137 services**
-
-</td>
-
-</tr>
-
-</table>
-
 ---
 
 # 📂 Dataset
